@@ -1,4 +1,4 @@
-# ⚡ Electrician Toolkit v0.03
+# ⚡ Electrician Toolkit v0.04
 
 [![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![GUI Framework](https://img.shields.io/badge/GUI-CustomTkinter-indigo?style=for-the-badge&logo=python&logoColor=white)](https://github.com/tomschimansky/CustomTkinter)
@@ -8,7 +8,7 @@ A premium, desktop-grade suite of utility tools designed for electricians, elect
 
 ---
 
-## ✨ Features (v0.03)
+## ✨ Features (v0.04)
 
 ### 🖥️ Central Dashboard
 * **Dynamic Sidebar**: Categorized tabs for **Simulation**, **Calculators**, and **References**.
@@ -34,6 +34,12 @@ A premium, desktop-grade suite of utility tools designed for electricians, elect
 * **Reverse Band Finder**: Enter a target resistance (e.g., `4k7`) and tolerance to instantly compute the corresponding band sequence.
 * **SMD Chip Resistor Decoder**: Decodes **3-digit** (standard), **4-digit** (precision), and **EIA-96** (1% precision) chip codes, drawing a visual representation of the chip resistor with terminals.
 * **Image Export**: Export THT and SMD visual previews directly as images.
+
+### 📉 Voltage Drop Calculator
+* **Wire Voltage Loss Estimator**: Compute the voltage drop based on material (Copper, Aluminum), wire gauge (AWG), phase (Single, Three-phase), and length.
+* **Smart AWG Suggestion**: Automatically calculates the recommended AWG to satisfy a target percentage voltage drop.
+* **Reverse Calculations**: Displays max one-way length for an allowed target drop %.
+* **Detailed Readout**: Offers resistance calculation (Line R one-way), absolute drop, and percentage drop estimation.
 
 ---
 
@@ -63,7 +69,8 @@ mvp/
         ├── dashboard_window.py# Central sidebar dashboard
         ├── ohms_law_window.py # Ohm's Law Calculator & Wheel
         ├── power_calculator_window.py # Power Calculator & Triangle
-        └── resistor_colors_window.py # Color Decoder & SMD code solver
+        ├── resistor_colors_window.py # Color Decoder & SMD code solver
+        └── voltage_drop_window.py # Wire Voltage Loss Estimator
 ```
 
 ---

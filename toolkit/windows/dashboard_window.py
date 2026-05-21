@@ -7,6 +7,7 @@ import time
 from windows.ohms_law_window import ohms_law_window
 from windows.power_calculator_window import power_calculator_window
 from windows.resistor_colors_window import resistor_colors_window
+from windows.voltage_drop_window import voltage_drop_window
 
 class ToolCard(ctk.CTkFrame):
     def __init__(self, master, title, desc, icon, command):
@@ -119,7 +120,7 @@ class DashboardWindow(ctk.CTk):
         self.tools_calc = [
             ("Ohm's Law", "V, I, R, P Relationships", "⚡", ohms_law_window),
             ("Power Calc", "DC Power Dissipation", "🔋", power_calculator_window),
-            ("Volt Drop", "Wire Voltage Loss Estimator", "📉", "voltage_drop"),
+            ("Volt Drop", "Wire Voltage Loss Estimator", "📉", voltage_drop_window),
             ("555 Timer", "Astable & Monostable Design", "⏲️", "timer_555"),
             ("Battery Life", "Runtime Estimator", "🔋", "battery_life"),
             ("LED Resistor", "Series Limiting Resistor", "💡", "led_resistor"),
