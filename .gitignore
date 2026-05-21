@@ -58,3 +58,4 @@ autosave.json
 # PostScript & Canvas Image Outputs
 *.ps
 *.pdf
+RELEASE_NOTES.md

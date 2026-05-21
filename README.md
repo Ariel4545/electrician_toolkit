@@ -1,4 +1,4 @@
-# ⚡ Electrician Toolkit MVP
+# ⚡ Electrician Toolkit v0.03
 
 [![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![GUI Framework](https://img.shields.io/badge/GUI-CustomTkinter-indigo?style=for-the-badge&logo=python&logoColor=white)](https://github.com/tomschimansky/CustomTkinter)
@@ -8,7 +8,7 @@ A premium, desktop-grade suite of utility tools designed for electricians, elect
 
 ---
 
-## ✨ Features (MVP v1.0)
+## ✨ Features (v0.03)
 
 ### 🖥️ Central Dashboard
 * **Dynamic Sidebar**: Categorized tabs for **Simulation**, **Calculators**, and **References**.
@@ -99,31 +99,3 @@ On Linux distributions using fractional scaling (such as Linux Mint Cinnamon), T
 * **Scaling Reset**: The toolkit automatically resets default scaling to a razor-sharp standard `1.0` (100%) at launch to prevent text distortions.
 * **Custom Zoom**: If widgets look too small on high-resolution screens (like 4K), navigate to **Settings** in the sidebar and increase **UI Scaling** to a clean, crisp factor (e.g., `120%`, `150%`, or `200%`).
 
----
-
-## 📤 Push-Ready GitHub Repository Setup
-
-To upload this clean MVP as a brand-new, standalone repository on your GitHub account, open your terminal inside the `mvp/` folder and run the following command sequence:
-
-```bash
-# 1. Navigate directly inside the mvp directory
-cd mvp/
-
-# 2. Initialize a local git repository
-git init
-
-# 3. Stage all your push-ready modular files
-git add .
-
-# 4. Commit your initial MVP release
-git commit -m "Initialize Electrician Toolkit MVP v1.0"
-
-# 5. Configure your default branch name to main
-git branch -M main
-
-# 6. Add your target GitHub repository remote origin (Replace with your actual link)
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-
-# 7. Push your new, clean release to GitHub!
-git push -u origin main
-```
