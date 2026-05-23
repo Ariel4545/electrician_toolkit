@@ -53,6 +53,23 @@ def parse_awg_label(text_value: str) -> int:
     return int(text_value)
 
 
+def format_si_unit(number_value: float, unit_suffix: str) -> str:
+    try:
+        number_abs = abs(number_value)
+        if number_abs == 0:
+            return f'0 {unit_suffix}'
+        pairs = [('G', 1e9), ('M', 1e6), ('k', 1e3), ('', 1), ('m', 1e-3), ('µ', 1e-6), ('n', 1e-9)]
+        for prefix_text, factor_value in pairs:
+            if number_abs >= factor_value and factor_value >= 1:
+                return f'{number_value / factor_value:.4g} {prefix_text}{unit_suffix}'
+        for prefix_text, factor_value in pairs[4:]:
+            if number_abs >= factor_value:
+                return f'{number_value / factor_value:.4g} {prefix_text}{unit_suffix}'
+        return f'{number_value:.4g} {unit_suffix}'
+    except Exception:
+        return f'{number_value} {unit_suffix}'
+
+
 def safe_float(text_value: str):
     text_clean = (text_value or '').strip()
     if not text_clean:

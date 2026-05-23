@@ -8,6 +8,7 @@ from windows.ohms_law_window import ohms_law_window
 from windows.power_calculator_window import power_calculator_window
 from windows.resistor_colors_window import resistor_colors_window
 from windows.voltage_drop_window import voltage_drop_window
+from windows.equivalent_resistance_window import equivalent_resistance_window
 
 class ToolCard(ctk.CTkFrame):
     def __init__(self, master, title, desc, icon, command):
@@ -126,7 +127,7 @@ class DashboardWindow(ctk.CTk):
             ("LED Resistor", "Series Limiting Resistor", "💡", "led_resistor"),
             ("Volt Divider", "Resistive Division", "➗", "voltage_divider"),
             ("Filters", "Active/Passive Filter Design", "〰️", "filter_design"),
-            ("Equiv. Res", "Series/Parallel/Star-Delta", "🕸️", "equivalent_resistance"),
+            ("Equiv. Res", "Series/Parallel/Star-Delta", "🕸️", equivalent_resistance_window),
         ]
         
         self.tools_ref = [

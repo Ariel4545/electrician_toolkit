@@ -1,4 +1,4 @@
-# ⚡ Electrician Toolkit v0.04
+# ⚡ Electrician Toolkit v0.05
 
 [![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![GUI Framework](https://img.shields.io/badge/GUI-CustomTkinter-indigo?style=for-the-badge&logo=python&logoColor=white)](https://github.com/tomschimansky/CustomTkinter)
@@ -8,7 +8,7 @@ A premium, desktop-grade suite of utility tools designed for electricians, elect
 
 ---
 
-## ✨ Features (v0.04)
+## ✨ Features (v0.05)
 
 ### 🖥️ Central Dashboard
 * **Dynamic Sidebar**: Categorized tabs for **Simulation**, **Calculators**, and **References**.
@@ -41,6 +41,12 @@ A premium, desktop-grade suite of utility tools designed for electricians, elect
 * **Reverse Calculations**: Displays max one-way length for an allowed target drop %.
 * **Detailed Readout**: Offers resistance calculation (Line R one-way), absolute drop, and percentage drop estimation.
 
+### 🕸️ Equivalent Resistance Calculator
+* **Series and Parallel Computation**: Easily switch between series and parallel equivalent resistance modes.
+* **Advanced Parsing**: Fast string parsing supports SI unit prefixes (e.g. `1k`, `4M7`, `330`, `2.2k`) mixed in comma or space-separated lists.
+* **Live List Builder**: Visually add, clear, and sort resistors dynamically before evaluating the equivalent network resistance.
+* **Intelligent Feedback**: Gives quick statistic summaries (Count, Min, Max values) alongside computational warnings (e.g., parallel equivalents lower than minimum).
+
 ---
 
 ## 🛠️ Tech Stack & Directory Architecture
@@ -70,7 +76,8 @@ mvp/
         ├── ohms_law_window.py # Ohm's Law Calculator & Wheel
         ├── power_calculator_window.py # Power Calculator & Triangle
         ├── resistor_colors_window.py # Color Decoder & SMD code solver
-        └── voltage_drop_window.py # Wire Voltage Loss Estimator
+        ├── voltage_drop_window.py # Wire Voltage Loss Estimator
+        └── equivalent_resistance_window.py # Equivalent Resistance Calculator
 ```
 
 ---
